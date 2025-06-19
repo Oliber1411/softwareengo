@@ -1,3 +1,4 @@
+# I should comment my code so I can understand stuff
 health = 100
 food = 100
 
