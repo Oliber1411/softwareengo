@@ -1,3 +1,6 @@
+from colorama import init, Fore, Style
+
+
 rooms = {
     "entrance": {
         "description": "The delapitated entrance of the soup kitchen, the only way to continue is north. Or you could just leave",
@@ -7,7 +10,7 @@ rooms = {
     "dining_room": {
         "description": "the main dining_room, once filled with life is now abondened, save for one can of soup",
         "exits": {"south": "entrance", "east": "left_security_hall", "west": "ball_pit", "north": "kitchen_hall"},
-        "items": ["Canned soup"]
+        "items": ["canned_soup"]
     },
     "left_security_hall": {
         "description": "A dingy hallway, a lone security camera hooked to the wall, you know it has no power but you cant shake the feeling you're being watched",
@@ -61,9 +64,9 @@ rooms = {
     }, 
     "bathroom": {
         "description": "An abhorrently disgusting bathroom, even for the standards of an apocolypse this is truly putrid.",
-        "exits": {"esouth": "employee_loungue"},
-        "items": [""]
-    },       
+        "exits": {"south": "employee_loungue"},
+        "items": []
+    },             
 }
 
 starting_room = "entrance"
