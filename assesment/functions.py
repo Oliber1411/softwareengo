@@ -6,7 +6,9 @@ def show_location(room_name, rooms): # This line defines a function called show_
         print("You see:", ", ".join(room["items"]))
     print("Exits:", ", ".join(room["exits"].keys()))
 
-def input():
-    return input("what would you like to do?").lower()
-
-def move(current_room,direction,rooms)
+def movement(current_room,direction,moved_room):
+    if direction in moved_room [current_room] ["exits"]:
+        return moved_room, [current_room] , ["exits"] , [direction]
+    else:
+        print("you cant go that way")
+        return current_room

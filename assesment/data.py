@@ -1,5 +1,3 @@
-from colorama import init, Fore, Style
-
 
 rooms = {
     "entrance": {
