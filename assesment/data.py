@@ -2,7 +2,10 @@
 rooms = {
     "entrance": {
         "description": "The delapitated entrance of the soup kitchen, the only way to continue is north. Or you could just leave",
-        "exits": {"north": "dining_room", "south": "exit"},
+        "exits": {
+            "north": "dining_room", 
+            "south": "exit",
+        },
         "items": []
     },
     "dining_room": {
@@ -62,7 +65,7 @@ rooms = {
     }, 
     "bathroom": {
         "description": "An abhorrently disgusting bathroom, even for the standards of an apocolypse this is truly putrid.",
-        "exits": {"south": "employee_loungue"},
+        "exits": [{"south": "employee_loungue"}],
         "items": []
     },             
 }

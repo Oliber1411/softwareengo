@@ -1,3 +1,5 @@
+from data import *
+
 def show_location(room_name, rooms): # This line defines a function called show_location 
     room = rooms[room_name]
     print("\nYou are in", room_name.upper())
@@ -6,9 +8,9 @@ def show_location(room_name, rooms): # This line defines a function called show_
         print("You see:", ", ".join(room["items"]))
     print("Exits:", ", ".join(room["exits"].keys()))
 
-def movement(current_room,direction,moved_room):
-    if direction in moved_room [current_room] ["exits"]:
-        return moved_room, [current_room] , ["exits"] , [direction]
+def movement(current_room,direction,rooms):
+    if direction in rooms [current_room]["exits"]:
+        return rooms, [current_room] , ["exits"] , [direction]
     else:
         print("you cant go that way")
         return current_room
