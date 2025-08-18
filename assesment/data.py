@@ -3,14 +3,14 @@ rooms = {
     "entrance": {
         "description": "The delapitated entrance of the soup kitchen, the only way to continue is north. Or you could just leave",
         "exits": {
-            "north": "dining_room", 
-            "south": "exit",
+            "north": {"dining_room"},
+            "south": {"exit"}
         },
         "items": []
     },
     "dining_room": {
         "description": "the main dining_room, once filled with life is now abondened, save for one can of soup",
-        "exits": {"south": "entrance", "east": "left_security_hall", "west": "ball_pit", "north": "kitchen_hall"},
+        "exits" : {"south": "entrance", "east": "left_security_hall", "west": "ball_pit", "north": "kitchen_hall"},
         "items": ["canned_soup"]
     },
     "left_security_hall": {
