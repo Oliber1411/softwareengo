@@ -9,7 +9,6 @@ def show_location(room_name, rooms): # This line defines a function called show_
     print("Exits:".join(room["exits"].keys()))
 
 def movement(current_room,direction,rooms):
-    print(current_room["description"])
     if direction in rooms[current_room]["exits"]:
         return rooms[current_room]["exits"][direction]
     else:
