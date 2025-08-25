@@ -17,12 +17,12 @@ rooms = {
     },
     "ball_pit":{
         "description": "A decayed kids ball pit, the plastic crunches beneath, could serve has a hiding spot",
-        "exists": {"east": "dining_room"},
+        "exits": {"east": "dining_room"},
         "items": []
     },
     "kitchen_hall":{
         "description": "You can catch a whiff of the rotten decaying food that must be in the kitchen from here, its disgusting.",
-        "exists": {"south": "dining_room", "north" : "kitchen"},
+        "exits": {"south": "dining_room", "north" : "kitchen"},
         "items": []
     },
     "security": {
@@ -37,18 +37,18 @@ rooms = {
     },
     "kitchen": {
         "description": "The repugnent smell of rotting food and moldy floors would be enough to make you leave right now if you werent so desperate for food. Luckily for you a single unoppened can sits on bench top",
-        "exits": {"south": "storage", "east": "right_security_hall", "west": "employee_loungue"},
-        "items": ["canned_food"]
+        "exits": {"south": "kitchen_hall", "east": "right_security_hall", "west": "employee_loungue", "north": "storage"},
+        "items": ["canned_tomatoes"]
     },
     "storage": {
         "description": "The room is filled from bottom to top with mold, maggots crawl along the rusted metal shelves which once held something that might be considered edible",
-        "exits": {"north": "kitchen", "south": "freezer"},
+        "exits": {"south": "kitchen", "north": "freezer"},
         "items": []
     },
     "freezer": {
         "description": "That awful smell which permiated the storage room dissapates as you enter the chilling tempretures of the freezer, this room would hold wel preservered meat if someone or something hadnt gotten to it first.",
-        "exits": {"north": "storage"},
-        "items": []
+        "exits": {"south": "storage"},
+        "items": ["canned_meat"]
     },
     "employee_loungue": {
         "description": "A room for resting, no time now though, not that you would want to the loungue itself is destroyed. You notice an employee ID sitting on a table top.",
@@ -62,7 +62,12 @@ rooms = {
     }, 
     "bathroom": {
         "description": "An abhorrently disgusting bathroom, even for the standards of an apocolypse this is truly putrid.",
-        "exits": [{"south": "employee_loungue"}],
+        "exits": {"south": "employee_loungue"},
+        "items": []
+    },             
+    "exit": {
+        "description": "",
+        "exits": {},
         "items": []
     },             
 }
